@@ -1,91 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000&display=swap"
+      rel="stylesheet"
+    />
     <title>Estação Meteorológica</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="dist.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <img src="./img/logo-mack.png" alt="logotipo mackenzie">
-        <a href="http://mackleaps.mackenzie.br/" target="_blank">
-            <div id="logo-mackleaps">
-                <img src="./img/Logo Mackleaps.svg" alt="logo-mackleaps" />
-                <h2>Mackleaps</h2>
-            </div>    
+      <img src="./img/logo-mack.png" alt="logotipo mackenzie" />
+      <div class="logoContainer">
+        <a href="https://mackleaps.mackenzie.br/" target="_blank">
+          <div id="logo-mackleaps">
+            <img src="./img/Logo Mackleaps.svg" alt="logo-mackleaps" />
+            <h2>Mackleaps</h2>
+          </div>
         </a>
+        <a
+          href="https://www.mackenzie.br/centro-de-radio-astronomia-e-astrofisica-mackenzie"
+          target="_blank"
+        >
+          <div id="logo-mackleaps">
+            <img src="./img/M_vermelho.png" alt="logo-craam" id="logo-craam" />
+            <h2>CRAAM</h2>
+          </div>
+        </a>
+      </div>
     </header>
     <main>
-        <section id="weather-status">
-            <div id="location-title">
-                <img src="./img/Location.png" alt="location">
-                <img id="green-bar" src="./img/Line 2.png" alt="">
-                <h2>Mackenzie - Prédio 45</h2>
-            </div>
-            <div class="temp-main-content">
-                <img src="./img/Termometro.svg" alt="">
-                <p id="temperature">-ºC</p>
-            </div>
-            <div id="temp-footer">
-                <p id="information-time">Ultima atualização: -:-PM</p>
-            </div>
-        </section>
-        <section>
-            <div class="card">
-                <h2>Vento</h2>
-                <div class="card-information-container">
-                    <p id="wind-speed">- <span class="unit">km/h</span> </p>
-                </div>
-                <div class="card-footer">
-                    <img id="arrowImg" src="./img/Near Me.png" alt="seta">
-                    <p id="wind-direction">-</p>
-                </div>
-            </div>
-            <hr>
-            <div class="card">
-                <h2>Sensação Térmica</h2>
-                <div class="card-information-container">
-                    <p id="feels-like">-ºC</p>
-                </div>
-                <div class="card-footer">
-                    <img id="thermal-sensation-icon" class="stable2" alt="seta">
-                    <p id="feels-like-variation">-</p>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="card">
-                <h2 id="humidity-label">Umidade relativa</h2>
-                <div class="card-information-container">
-                    <p id="relative-humidity">-%</p>
-                </div>
-                <div class="card-footer">
-                    <img id="humidity-icon" class="stable1" alt="seta">
-                    <p id="relative-humidity-variation">-</p>
-                </div>
-            </div>
-            <hr>
-            <div class="card">
-                <h2>Pressão</h2>
-                <div class="card-information-container">
-                    <p id="pressure">- <span class="unit">hPa</span></p>
-                </div>
-                <div class="card-footer">
-                    <img id="pressure-icon" class="stable2" alt="seta">
-                    <p id="pressure-variation">-</p>
-                </div>
-            </div>
-        </section>
+      <section id="weather-status">
+        <div id="location-title">
+          <img src="./img/Location.png" alt="location" />
+          <img id="green-bar" src="./img/Line 2.png" alt="" />
+          <h2>Mackenzie - Prédio 45 CRAAM</h2>
+        </div>
+        <div class="temp-main-content">
+          <img src="./img/Termometro.svg" alt="" />
+          <p id="temperature">-ºC</p>
+        </div>
+        <div id="temp-footer">
+          <p id="information-time">Ultima atualização: -:-PM</p>
+        </div>
+      </section>
+      <section>
+        <div class="card">
+          <h2>Vento</h2>
+          <div class="card-information-container">
+            <p id="wind-speed">- <span class="unit">km/h</span></p>
+          </div>
+          <div class="card-footer">
+            <img id="arrowImg" src="./img/Near Me.png" alt="seta" />
+            <p id="wind-direction">-</p>
+          </div>
+        </div>
+        <hr />
+        <div class="card">
+          <h2>Sensação Térmica</h2>
+          <div class="card-information-container">
+            <p id="feels-like">-ºC</p>
+          </div>
+          <div class="card-footer">
+            <img id="thermal-sensation-icon" class="stable2" alt="seta" />
+            <p id="feels-like-variation">-</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="card">
+          <h2 id="humidity-label">Umidade relativa</h2>
+          <div class="card-information-container">
+            <p id="relative-humidity">-%</p>
+          </div>
+          <div class="card-footer">
+            <img id="humidity-icon" class="stable1" alt="seta" />
+            <p id="relative-humidity-variation">-</p>
+          </div>
+        </div>
+        <hr />
+        <div class="card">
+          <h2>Pressão</h2>
+          <div class="card-information-container">
+            <p id="pressure">- <span class="unit">hPa</span></p>
+          </div>
+          <div class="card-footer">
+            <img id="pressure-icon" class="stable2" alt="seta" />
+            <p id="pressure-variation">-</p>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-    </footer>
-</body>
-
+    <footer></footer>
+  </body>
 </html>
