@@ -113,7 +113,6 @@ function updateRelativeHumidity() {
     "relative-humidity-variation"
   );
   var relativeHumidityVariationImg = document.getElementById("humidity-icon");
-  weatherData.humidity_rel = 50;
   relativeHumidity.innerText = "".concat(
     Math.round(weatherData.humidity_rel),
     "%"
