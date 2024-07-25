@@ -34,15 +34,16 @@ function updateTemperatureCard() {
   var informationTime = document.getElementById("information-time");
   var updatedTemperature = Math.round(weatherData.temperature);
   var updatedTime = weatherData.createdAt.substring(11, 16);
-  var hours = updatedTime.substring(0, 2);
+  var hours = parseInt(updatedTime.substring(0, 2), 10);
   var period = hours > 11 ? "PM" : "AM";
+  hours = (hours - 3 + 24) % 24;
+  updatedTime = (hours < 10 ? "0" : "") + hours + updatedTime.substring(2, 5);
+  period = hours > 11 ? "PM" : "AM";
   temperature.innerText = "".concat(updatedTemperature, "\xBAC");
-  if (period === "PM") {
-    updatedTime = (hours != 12 ? hours - 12 : 12) + updatedTime.substring(2, 5);
-    informationTime.innerText = "Ultima atualiza\xE7\xE3o: "
-      .concat(updatedTime)
-      .concat(period);
-  }
+  informationTime.innerText = "Última atualização: "
+    .concat(updatedTime)
+    .concat(period);
+
   return updatedTemperature;
 }
 
