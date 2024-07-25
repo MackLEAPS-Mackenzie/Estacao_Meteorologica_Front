@@ -3,7 +3,7 @@ var weatherFlutuation = {};
 
 // Função para buscar a lista de caminhos das imagens da API
 async function fetchWeatherData() {
-  const apiUrl = `https://mackleaps.mackenzie.br/meteorologiaapi/reports/latest`;
+  const apiUrl = `https://mackleaps.mackenzie.br/meteorologiaapi/reports/latest?station=CRAAM`;
   return fetch(apiUrl)
     .then((response) => {
       if (!response.ok) {
